@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTI Elevadores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="#">
+
+        <div class="cabecalho">
+            <img src="/Acets/LTI logo.png" alt="logo-lti-elevadores" class="logo">
+        </div>
+
+        <div class="secao-cliente">
+            <h3>Dados do Cliente:</h3>
+            <label for="cnpjContratante">CPF/CNPJ:</label>
+            <input type="text" id="cnpjContratante" maxlength="18" placeholder="Digite apenas números"
+                name="cnpjContratante">
+
+            <label for="contratante">Nome do Cliente:</label>
+            <input type="text" id="contratante" name="contratante" placeholder="Digite o nome do cliente">
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Digite o endereço do cliente">
+
+            <label for="numero">Numero:</label>
+            <input type="text" id="numero" name="numero" placeholder="Digite o número">
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" maxlength="10" placeholder="Digite apenas os números">
+        </div>
+
+        <div class="secao-equipamentos">
+            <h3>Informações dos Equipamentos:</h3>
+            <label for="equipamento">Equipamento:</label>
+            <select name="equipamento" id="equipamento">
+                <option value="">Selecione o tipo de equipamento:</option>
+                <option value="elevadores">Elevadores</option>
+                <option value="escadas">Escadas</option>
+                <option value="esteiras">Esteiras</option>
+                <option value="acessibilidade">Acessibilidade / Plataformas</option>
+            </select>
+
+            <label for="marcaEquipamento">Marca do Equipamento:</label>
+            <select name="marcaEquipamento" id="marcaEquipamento">
+                <option value="">Selecione a marca do equipamento:</option>
+                <option value="thyssenkrupp">Thyssenkrupp / TKE</option>
+                <option value="atlas">Atlas Schindler</option>
+                <option value="otis">Otis</option>
+                <option value="castelo">Castelo</option>
+                <option value="boxtop">Boxtop</option>
+                <option value="outras">Outras</option>
+            </select>
+
+            <label for="quantidade">Quantidade:</label>
+            <select name="quantidade" id="quantidade">
+                <option value="">Digite a quantide de equipamentos:</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <label for="paradas">Numero de Paradas</label>
+            <select name="paradas" id="paradas">
+                <option value="">Número de paradas</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+
+        <div class="secao-financeiro">
+            <h3>Dados financeiro:</h3>
+            <label for="vigencia">Inicio do Contrato:</label>
+            <input type="date" id="vigencia" name="vigencia" onclick="this.showPicker()">
+
+            <label for="valorContrato">Valor do Contrato:</label>
+            <input type="text" id="valorContrato" name="valorContrato">
+            <div>
+                <label for="desconto">O contrato terá Gratuidade ?</label>
+                <input type="radio" id="gratuidadeSim" name="temGratuidade" value="Sim"> <label
+                    for="gratuidadeSim">Sim</label>
+                <input type="radio" id="gratuidadeNao" name="temGratuidade" value="Nao"> <label
+                    for="gratuidadeNao">Não</label>
+            </div>
+
+            <label for="gratuidade">Gratuidades:</label>
+            <select name="gratuidade" id="gratuidade">
+                <option value="gratuidade1">1</option>
+                <option value="gratuidade2">2</option>
+                <option value="gratuidade3">3</option>
+                <option value="gratuidade4">4</option>
+            </select>
+
+            <div class="grade-meses">
+
+                <div class="item-mes">
+                    <input type="checkbox" id="mesJan" name="mesesDesconto" value="Janeiro">
+                    <label for="mesJan">Janeiro</label>
+                </div>
+
+                <div class="item-mes">
+                    <input type="checkbox" id="mesFev" name="mesesDesconto" value="Fevereiro">
+                    <label for="mesFev">Fevereiro</label>
+                </div>
+
+                <div class="item-mes">
+                    <input type="checkbox" id="mesMar" name="mesesDesconto" value="Marco">
+                    <label for="mesMar">Março</label>
+                </div>
+
+                <div class="item-mes">
+                    <input type="checkbox" id="mesAbr" name="mesesDesconto" value="Abril">
+                    <label for="mesAbr">Abril</label>
+                </div>
+
+                <div class="item-mes">
+                    <input type="checkbox" id="mesMai" name="mesesDesconto" value="Maio">
+                    <label for="mesMai">Maio</label>
+                </div>
+
+                <div class="item-mes">
+                    <input type="checkbox" id="mesJun" name="mesesDesconto" value="Junho">
+                    <label for="mesJun">Junho</label>
+                </div>
+
+                <div class="item-mes">
+                    <input type="checkbox" id="mesJul" name="mesesDesconto" value="Julho">
+                    <label for="mesJul">Julho</label>
+                </div>
+
+                <div class="item-mes">
+                    <input type="checkbox" id="mesAgo" name="mesesDesconto" value="Agosto">
+                    <label for="mesAgo">Agosto</label>
+                </div>
+
+                <div class="item-mes">
+                    <input type="checkbox" id="mesSet" name="mesesDesconto" value="Setembro">
+                    <label for="mesSet">Setembro</label>
+                </div>
+
+                <div class="item-mes">
+                    <input type="checkbox" id="mesOut" name="mesesDesconto" value="Outubro">
+                    <label for="mesOut">Outubro</label>
+                </div>
+
+                <div class="item-mes">
+                    <input type="checkbox" id="mesNov" name="mesesDesconto" value="Novembro">
+                    <label for="mesNov">Novembro</label>
+                </div>
+
+                <div class="item-mes">
+                    <input type="checkbox" id="mesDez" name="mesesDesconto" value="Dezembro">
+                    <label for="mesDez">Dezembro</label>
+                </div>
+            </div>
+        </div>
+        <div id="button">
+            <button type="button" id="btnGerar">Gerar Contrato</button>
+        </div>
+    </form>
+    <script src="motor.js"></script>
+</body>
+
+</html>

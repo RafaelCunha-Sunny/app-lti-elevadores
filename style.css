@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- PALETA DE CORES LTI ELEVADORES --- */
+:root {
+    --fundo-pagina: #f0f2f5;    /* Cinza bem clarinho e suave para o fundo */
+    --fundo-caixas: #ffffff;    /* Caixas 100% brancas para dar destaque */
+    --azul-lti: #005ce6;        /* O nosso azul clássico da LTI continua! */
+    --azul-hover: #004bbb;
+    --texto-principal: #2d3748; /* Cinza bem escuro para leitura (melhor que preto puro) */
+    --texto-labels: #4a5568;    /* Um cinza médio e elegante para as perguntas */
+    --cor-borda: #e2e8f0;       /* Cor da bordinha suave das caixas */
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    max-width: 300px;
+    height: auto;
+}
+
+ body{
+    background-color:  var(--fundo-pagina);
+    color: var(--texto-claro);
+    padding: 40px 20px;
+ }
+
+ .secao-cliente, .secao-equipamentos, .secao-financeiro{
+    background-color: var(--fundo-caixas);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid #2a2e38;
+ }
+
+ h3{
+    color: var(--azul-lti);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #2a2e38;
+    padding-bottom: 10px;
+ }
+
+ label{
+    color: var(--texto-labels);
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+ }
+
+ input[type="text"],
+ input[type="date"],
+ select{
+    width: 100%;
+    padding: 12px;
+    background-color: var(--fundo-pagina);
+    border: 1px solid #2a2e38;
+    border-radius: 6px;
+    color: var(--texto-principal);
+    font-size: 16px;
+ }
+
+ input:focus, select:focus{
+    outline: none;
+    border-color: var(--azul-lti);
+ }
+
+ button{
+    width: 100%;
+    background-color: var(--azul-lti);
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    transition: background-color 0.3s ease;
+ }
+
+ button:hover {
+    background-color: var(--azul-hover);
+ }
+
+ form {
+    max-width: 800px;
+    margin: 0 auto;
+ }
+
+ button:active {
+    transform: scale(0.98);
+    background-color: #003a99;
+ }
+
+ select,
+ input[type="date"] {
+    cursor: pointer;
+ }
+
+ input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+ }
+
+ .grade-meses {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 15px;
+    margin-top: 15px;
+ }
+
+ .item-mes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+ }
+
+ .item-mes label,
+ .item-mes input {
+    margin: 0;
+    cursor: pointer;
+    font-weight: 400;
+ }
+
+ input[type="radio"] + label {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 5px;
+    font-weight: 400;
+    cursor: pointer;
+ }
+
+ input[type="radio"],
+ input[type="checkbox"] {
+    cursor: pointer;
+    transform: scale(1.2);
+ }
