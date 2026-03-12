@@ -144,3 +144,21 @@
     cursor: pointer;
     transform: scale(1.2);
  }
+
+ /* --- ALINHAMENTO DOS VALORES FINANCEIROS --- */
+.linha-valores {
+    display: flex;
+    gap: 20px; 
+    margin-top: 15px;
+}
+
+.campo-metade {
+    width: 50%; 
+}
+
+.campo-bloqueado {
+    background-color: #e2e8f0 !important; 
+    cursor: not-allowed !important; 
+    font-weight: bold;
+    color: var(--azul-lti) !important;
+}

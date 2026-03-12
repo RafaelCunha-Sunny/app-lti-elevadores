@@ -99,87 +99,90 @@
 
         <div class="secao-financeiro">
             <h3>Dados financeiro:</h3>
+
             <label for="vigencia">Inicio do Contrato:</label>
             <input type="date" id="vigencia" name="vigencia" onclick="this.showPicker()">
 
-            <label for="valorContrato">Valor do Contrato:</label>
-            <input type="text" id="valorContrato" name="valorContrato">
+            <div class="linha-valores">
+                <div class="campo-metade">
+                    <label for="valorEquipamento">Valor por equipamento:</label>
+                    <input type="text" id="valorEquipamento" name="valorEquipamento" placeholder="R$ 0,00">
+                </div>
+
+                <div class="campo-metade">
+                    <label for="valorTotal">Valor Total:</label>
+                    <input type="text" id="valorTotal" name="valorTotal" placeholder="R$ 0,00" readonly
+                        class="campo-bloqueado">
+                </div>
+            </div>
+
             <div>
                 <label for="desconto">O contrato terá Gratuidade ?</label>
                 <input type="radio" id="gratuidadeSim" name="temGratuidade" value="Sim"> <label
                     for="gratuidadeSim">Sim</label>
-                <input type="radio" id="gratuidadeNao" name="temGratuidade" value="Nao"> <label
+                <input type="radio" id="gratuidadeNao" name="temGratuidade" value="Nao" checked> <label
                     for="gratuidadeNao">Não</label>
             </div>
 
-            <label for="gratuidade">Gratuidades:</label>
-            <select name="gratuidade" id="gratuidade">
-                <option value="gratuidade1">1</option>
-                <option value="gratuidade2">2</option>
-                <option value="gratuidade3">3</option>
-                <option value="gratuidade4">4</option>
-            </select>
+            <div id="area-gratuidade" style="display: none;">
 
-            <div class="grade-meses">
+                <label for="gratuidade">Gratuidades:</label>
+                <select name="gratuidade" id="gratuidade">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
 
-                <div class="item-mes">
-                    <input type="checkbox" id="mesJan" name="mesesDesconto" value="Janeiro">
-                    <label for="mesJan">Janeiro</label>
-                </div>
-
-                <div class="item-mes">
-                    <input type="checkbox" id="mesFev" name="mesesDesconto" value="Fevereiro">
-                    <label for="mesFev">Fevereiro</label>
-                </div>
-
-                <div class="item-mes">
-                    <input type="checkbox" id="mesMar" name="mesesDesconto" value="Marco">
-                    <label for="mesMar">Março</label>
-                </div>
-
-                <div class="item-mes">
-                    <input type="checkbox" id="mesAbr" name="mesesDesconto" value="Abril">
-                    <label for="mesAbr">Abril</label>
-                </div>
-
-                <div class="item-mes">
-                    <input type="checkbox" id="mesMai" name="mesesDesconto" value="Maio">
-                    <label for="mesMai">Maio</label>
-                </div>
-
-                <div class="item-mes">
-                    <input type="checkbox" id="mesJun" name="mesesDesconto" value="Junho">
-                    <label for="mesJun">Junho</label>
-                </div>
-
-                <div class="item-mes">
-                    <input type="checkbox" id="mesJul" name="mesesDesconto" value="Julho">
-                    <label for="mesJul">Julho</label>
-                </div>
-
-                <div class="item-mes">
-                    <input type="checkbox" id="mesAgo" name="mesesDesconto" value="Agosto">
-                    <label for="mesAgo">Agosto</label>
-                </div>
-
-                <div class="item-mes">
-                    <input type="checkbox" id="mesSet" name="mesesDesconto" value="Setembro">
-                    <label for="mesSet">Setembro</label>
-                </div>
-
-                <div class="item-mes">
-                    <input type="checkbox" id="mesOut" name="mesesDesconto" value="Outubro">
-                    <label for="mesOut">Outubro</label>
-                </div>
-
-                <div class="item-mes">
-                    <input type="checkbox" id="mesNov" name="mesesDesconto" value="Novembro">
-                    <label for="mesNov">Novembro</label>
-                </div>
-
-                <div class="item-mes">
-                    <input type="checkbox" id="mesDez" name="mesesDesconto" value="Dezembro">
-                    <label for="mesDez">Dezembro</label>
+                <div class="grade-meses">
+                    <div class="item-mes">
+                        <input type="checkbox" id="mesJan" name="mesesDesconto" value="Janeiro">
+                        <label for="mesJan">Janeiro</label>
+                    </div>
+                    <div class="item-mes">
+                        <input type="checkbox" id="mesFev" name="mesesDesconto" value="Fevereiro">
+                        <label for="mesFev">Fevereiro</label>
+                    </div>
+                    <div class="item-mes">
+                        <input type="checkbox" id="mesMar" name="mesesDesconto" value="Marco">
+                        <label for="mesMar">Março</label>
+                    </div>
+                    <div class="item-mes">
+                        <input type="checkbox" id="mesAbr" name="mesesDesconto" value="Abril">
+                        <label for="mesAbr">Abril</label>
+                    </div>
+                    <div class="item-mes">
+                        <input type="checkbox" id="mesMai" name="mesesDesconto" value="Maio">
+                        <label for="mesMai">Maio</label>
+                    </div>
+                    <div class="item-mes">
+                        <input type="checkbox" id="mesJun" name="mesesDesconto" value="Junho">
+                        <label for="mesJun">Junho</label>
+                    </div>
+                    <div class="item-mes">
+                        <input type="checkbox" id="mesJul" name="mesesDesconto" value="Julho">
+                        <label for="mesJul">Julho</label>
+                    </div>
+                    <div class="item-mes">
+                        <input type="checkbox" id="mesAgo" name="mesesDesconto" value="Agosto">
+                        <label for="mesAgo">Agosto</label>
+                    </div>
+                    <div class="item-mes">
+                        <input type="checkbox" id="mesSet" name="mesesDesconto" value="Setembro">
+                        <label for="mesSet">Setembro</label>
+                    </div>
+                    <div class="item-mes">
+                        <input type="checkbox" id="mesOut" name="mesesDesconto" value="Outubro">
+                        <label for="mesOut">Outubro</label>
+                    </div>
+                    <div class="item-mes">
+                        <input type="checkbox" id="mesNov" name="mesesDesconto" value="Novembro">
+                        <label for="mesNov">Novembro</label>
+                    </div>
+                    <div class="item-mes">
+                        <input type="checkbox" id="mesDez" name="mesesDesconto" value="Dezembro">
+                        <label for="mesDez">Dezembro</label>
+                    </div>
                 </div>
             </div>
         </div>
