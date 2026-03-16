@@ -8,8 +8,8 @@
 /* --- PALETA DE CORES LTI ELEVADORES --- */
 :root {
     --fundo-pagina: #f0f2f5;    /* Cinza bem clarinho e suave para o fundo */
-    --fundo-caixas: #ffffff;    /* Caixas 100% brancas para dar destaque */
-    --azul-lti: #005ce6;        /* O nosso azul clássico da LTI continua! */
+    --fundo-caixas: #ffffff;    /* Caixas 100% brancas  */
+    --azul-lti: #005ce6;        /* O azul clássico da LTI */
     --azul-hover: #004bbb;
     --texto-principal: #2d3748; /* Cinza bem escuro para leitura (melhor que preto puro) */
     --texto-labels: #4a5568;    /* Um cinza médio e elegante para as perguntas */

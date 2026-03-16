@@ -36,67 +36,104 @@
 
         <div class="secao-equipamentos">
             <h3>Informações dos Equipamentos:</h3>
-            <label for="equipamento">Equipamento:</label>
-            <select name="equipamento" id="equipamento">
-                <option value="">Selecione o tipo de equipamento:</option>
-                <option value="elevadores">Elevadores</option>
-                <option value="escadas">Escadas</option>
-                <option value="esteiras">Esteiras</option>
-                <option value="acessibilidade">Acessibilidade / Plataformas</option>
-            </select>
+            
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 15px;">
+                
+                <div>
+                    <label for="eqpQuantidade">Quantidade:</label>
+                    <select id="eqpQuantidade" style="width: 100%; box-sizing: border-box;">
+                        <option value="">Nº</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
 
-            <label for="marcaEquipamento">Marca do Equipamento:</label>
-            <select name="marcaEquipamento" id="marcaEquipamento">
-                <option value="">Selecione a marca do equipamento:</option>
-                <option value="thyssenkrupp">Thyssenkrupp / TKE</option>
-                <option value="atlas">Atlas Schindler</option>
-                <option value="otis">Otis</option>
-                <option value="castelo">Castelo</option>
-                <option value="boxtop">Boxtop</option>
-                <option value="outras">Outras</option>
-            </select>
+                <div>
+                    <label for="eqpEquipamento">Equipamento:</label>
+                    <select id="eqpEquipamento" style="width: 100%; box-sizing: border-box;">
+                        <option value="">Selecione...</option>
+                        <option value="Elevador">Elevador</option>
+                        <option value="Escada">Escada</option>
+                        <option value="Esteira">Esteira</option>
+                        <option value="Plataforma">Plataforma</option>
+                    </select>
+                </div>
 
-            <label for="quantidade">Quantidade:</label>
-            <select name="quantidade" id="quantidade">
-                <option value="">Digite a quantide de equipamentos:</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
+                <div>
+                    <label for="eqpMarca">Marca:</label>
+                    <select id="eqpMarca" style="width: 100%; box-sizing: border-box;">
+                        <option value="">Selecione...</option>
+                        <option value="Thyssenkrupp">Thyssenkrupp / TKE</option>
+                        <option value="Atlas Schindler">Atlas Schindler</option>
+                        <option value="Otis">Otis</option>
+                        <option value="Castelo">Castelo</option>
+                        <option value="Boxtop">Boxtop</option>
+                        <option value="Outras">Outras</option>
+                    </select>
+                </div>
 
-            <label for="paradas">Numero de Paradas</label>
-            <select name="paradas" id="paradas">
-                <option value="">Número de paradas</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-            </select>
+                <div>
+                    <label for="eqpTipo">Tipo:</label>
+                    <select id="eqpTipo" style="width: 100%; box-sizing: border-box;">
+                        <option value="">Selecione...</option>
+                        <option value="Passageiro">Passageiro</option>
+                        <option value="Carga">Carga</option>
+                        <option value="Maca/Leito">Maca/Leito</option>
+                        <option value="Acessibilidade">Acessibilidade</option>
+                        <option value="Monta-Carga">Monta-Carga</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="eqpParadas">Paradas:</label>
+                    <select id="eqpParadas" style="width: 100%; box-sizing: border-box;">
+                        <option value="">Nº</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">10</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="button" id="btnAdicionarEquipamento" style="width: 100%; background-color: #007BFF; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; margin-bottom: 20px; font-weight: bold;">
+                + Adicionar Equipamento
+            </button>
+
+            <table style="width: 100%; border-collapse: collapse; text-align: center; border: 1px solid #ccc; table-layout: fixed;">
+                <thead>
+                    <tr style="background-color: #f8f9fa; border-bottom: 2px solid #ccc; font-size: 14px;">
+                        <th style="padding: 10px; border-right: 1px solid #ccc; width: 30%;">EQUIPAMENTOS</th>
+                        <th style="padding: 10px; border-right: 1px solid #ccc; width: 20%;">MARCA</th>
+                        <th style="padding: 10px; border-right: 1px solid #ccc; width: 20%;">TIPO</th>
+                        <th style="padding: 10px; border-right: 1px solid #ccc; width: 15%;">PARADAS</th>
+                        <th style="padding: 10px; width: 15%;">AÇÃO</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-equipamentos-body">
+                    </tbody>
+            </table>
         </div>
-
         <div class="secao-financeiro">
             <h3>Dados financeiro:</h3>
 
